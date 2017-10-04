@@ -1,5 +1,5 @@
-<!-- <ul>
-  <li *ngFor="let pessoa of pessoas">
+<ul>
+  <li *ngFor="let pessoa of pessoas | async">
     {{ pessoa.nome + ' ' + pessoa.sobrenome }}
   </li>
-</ul> -->
+</ul>
