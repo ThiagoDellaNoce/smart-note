@@ -1,4 +1,5 @@
 import { CadastroPessoaModule } from './cadastro-pessoa/cadastro-pessoa.module';
+import { LoginModule } from './login/login.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,7 +11,7 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2/index';
 import { FirebaseConfig } from './../environments/firebase.config';
 
-import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +20,10 @@ import { CadastroPessoaComponent } from './cadastro-pessoa/cadastro-pessoa.compo
   imports: [
     BrowserModule,
     FormsModule, ReactiveFormsModule,
-    HttpModule, CadastroPessoaModule,
-    AngularFireModule.initializeApp(FirebaseConfig)
+    HttpModule,
+    CadastroPessoaModule, LoginModule,
+    AngularFireModule.initializeApp(FirebaseConfig),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
